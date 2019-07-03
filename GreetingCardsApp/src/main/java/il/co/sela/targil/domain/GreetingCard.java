@@ -22,9 +22,7 @@ public class GreetingCard {
 	long id;
 	String title;
 	String enteringWord;
-	enum prefix {
-		MR, MRS, MS, DR
-	}
+	Prefix prefix;
 	String firstName;
 	String lastName;
 	String celebration;
