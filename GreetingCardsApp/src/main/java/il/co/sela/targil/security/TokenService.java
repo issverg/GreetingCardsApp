@@ -1,4 +1,4 @@
-package il.co.sela.security;
+package il.co.sela.targil.security;
 
 import java.security.Key;
 import java.util.Calendar;
@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.stereotype.Service;
 
-import il.co.sela.dto.LoginInDto;
+import il.co.sela.targil.dto.LoginInDto;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 

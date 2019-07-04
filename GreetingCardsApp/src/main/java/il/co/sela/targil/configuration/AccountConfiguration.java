@@ -1,4 +1,4 @@
-package il.co.sela.configuration;
+package il.co.sela.targil.configuration;
 
 import java.util.Base64;
 

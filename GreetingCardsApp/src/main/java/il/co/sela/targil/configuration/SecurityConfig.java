@@ -1,4 +1,4 @@
-package il.co.sela.configuration;
+package il.co.sela.targil.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +11,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-import il.co.sela.security.TokenAuthenticationFilter;
-import il.co.sela.security.TokenAuthenticationManager;
+import il.co.sela.targil.security.TokenAuthenticationFilter;
+import il.co.sela.targil.security.TokenAuthenticationManager;
 
 @Configuration
 @EnableWebSecurity
