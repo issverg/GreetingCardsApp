@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class AccountConfiguration {
+	
 	public AccountUserCredentials tokenDecode(String token) {
 		int index = token.indexOf(" ");
 		token = token.substring(index + 1);
