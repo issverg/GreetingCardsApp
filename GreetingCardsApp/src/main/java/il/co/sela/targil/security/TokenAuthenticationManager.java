@@ -1,4 +1,4 @@
-package il.co.sela.security;
+package il.co.sela.targil.security;
 
 import javax.xml.bind.DatatypeConverter;
 
@@ -10,7 +10,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import il.co.sela.configuration.AccountConfiguration;
+import il.co.sela.targil.configuration.AccountConfiguration;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 

@@ -1,15 +1,15 @@
-package il.co.sela.configuration;
+package il.co.sela.targil.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-public class AccountUserCredentials {
-	String login;
+@AllArgsConstructor
+@NoArgsConstructor
+public class LoginInDto {
+	String email;
 	String password;
 }

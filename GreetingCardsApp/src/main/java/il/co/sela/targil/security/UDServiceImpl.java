@@ -1,4 +1,4 @@
-package il.co.sela.security;
+package il.co.sela.targil.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
