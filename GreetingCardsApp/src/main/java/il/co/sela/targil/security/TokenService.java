@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.stereotype.Service;
 
-import il.co.sela.targil.dto.LoginInDto;
+import il.co.sela.targil.dto.LoginInputDto;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
@@ -35,7 +35,7 @@ public class TokenService {
 		this.pKey = pKey;
 	}
 	
-	public String createToken(LoginInDto loginDto) {
+	public String createToken(LoginInputDto loginDto) {
 		SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
 		Calendar calendar = Calendar.getInstance();
 		calendar.add(Calendar.DATE, 7);
