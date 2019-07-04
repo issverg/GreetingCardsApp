@@ -1,5 +1,6 @@
 package il.co.sela.targil.dto;
 
+import il.co.sela.targil.annotations.IsValidLoginInputDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginInDto {
+@IsValidLoginInputDto
+public class LoginInputDto {
 	String email;
 	String password;
 }

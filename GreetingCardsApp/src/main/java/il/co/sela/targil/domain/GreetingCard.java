@@ -31,10 +31,11 @@ public class GreetingCard {
 	String signature;
 	String backgroundImageUrl;
 	boolean isTemplate;
+	boolean isPublic;
 	
 	public GreetingCard(String title, String enteringWord, 
 						String celebration, String endingWord, 
-						String backgroundImageUrl) {
+						String backgroundImageUrl, boolean isPublic) {
 		super();
 		this.title = title;
 		this.enteringWord = enteringWord;
@@ -42,5 +43,6 @@ public class GreetingCard {
 		this.endingWord = endingWord;
 		this.backgroundImageUrl = backgroundImageUrl;
 		isTemplate = true;
+		this.isPublic = isPublic;
 	}
 }
