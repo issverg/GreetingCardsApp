@@ -30,6 +30,7 @@ public class GreetingCard {
 	String endingWord;
 	String signature;
 	String backgroundImageUrl;
+	String owner;
 	boolean isTemplate;
 	boolean isPublic;
 	
