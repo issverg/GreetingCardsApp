@@ -19,7 +19,7 @@ import lombok.Setter;
 @Document(collection = "greeting_cards")
 public class GreetingCard {
 	@Id
-	long id;
+	String id;
 	String title;
 	String enteringWord;
 	Prefix prefix;
