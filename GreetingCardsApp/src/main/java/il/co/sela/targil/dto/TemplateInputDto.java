@@ -9,7 +9,12 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginInputDto {
-	String email;
-	String password;
+public class TemplateInputDto {
+	String title;
+	String enteringWord;
+	String celebration;
+	String endingWord;
+	String backgroundImageUrl;
+	boolean isPublic;
+	boolean isTemplate;
 }

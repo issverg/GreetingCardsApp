@@ -23,8 +23,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(WebSecurity webSecurity) {
-		webSecurity.ignoring().antMatchers(HttpMethod.POST, "/account/login");
-		webSecurity.ignoring().antMatchers(HttpMethod.POST, "/account/reg");
+		webSecurity.ignoring().antMatchers(HttpMethod.POST, "/signin");
+		webSecurity.ignoring().antMatchers(HttpMethod.POST, "/signup");
+		webSecurity.ignoring().antMatchers(HttpMethod.GET, "/greetingCard/catalog");
 		webSecurity.ignoring().antMatchers("/v2/api-docs",
                 "/configuration/ui",
                 "/swagger-resources/**",

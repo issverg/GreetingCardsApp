@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import il.co.sela.targil.domain.GreetingCard;
 
 @Repository
-public interface GreetingCardsRepository extends MongoRepository<GreetingCard, Long> {
+public interface GreetingCardsRepository extends MongoRepository<GreetingCard, String> {
 
 }
