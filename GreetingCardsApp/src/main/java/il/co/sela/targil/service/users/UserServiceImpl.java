@@ -41,7 +41,7 @@ public class UserServiceImpl implements IUserService {
 
 	private boolean validatingRegUserDto(String email) { //Meaning that all fields validations are implementing on frontend part
 		if (repo.existsById(email)) {					 //such as email and password formats, empty/not empty etc.
-			throw new EmailExistsException("User with such email: " + email + " is exists, already!");
+			throw new EmailExistsException("User with such email: " + email + " is exist, already!");
 		}
 		
 		return true;
