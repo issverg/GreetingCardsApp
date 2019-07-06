@@ -31,7 +31,7 @@ public class Client {
 	@Singular
 	Set<String> roles;
 	@Singular
-	List<Long> myCards;
+	List<String> myCards;
 	@Singular
-	List<Long> myTemplates;
+	List<String> myTemplates;
 }
