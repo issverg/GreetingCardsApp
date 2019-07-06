@@ -51,6 +51,7 @@ public class UserServiceImpl implements IUserService {
 	public LoginOutputDto signIn(LoginInputDto loginInputDto) {
 		validatingLoginInputDto(loginInputDto.getEmail(), loginInputDto.getPassword());
 		String token = tokenService.createToken(loginInputDto);
+		
 		return new LoginOutputDto(token);
 	}
 
@@ -62,6 +63,7 @@ public class UserServiceImpl implements IUserService {
 		if (!BCrypt.checkpw(password, repo.findById(email).get().getPassword())) {
 			throw new WrongPasswordException("Wrong password!");
 		}
+		
 		return true;
 	}
 }
