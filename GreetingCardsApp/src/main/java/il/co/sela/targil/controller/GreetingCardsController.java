@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import il.co.sela.targil.dto.CardFromTemplateInputDto;
 import il.co.sela.targil.dto.CardInputDto;
 import il.co.sela.targil.dto.CardOutputDto;
 import il.co.sela.targil.dto.TemplateInputDto;
@@ -39,8 +40,8 @@ public class GreetingCardsController {
 	}
 
 	@PostMapping("/byTemplate/{id}")
-	public CardOutputDto createCardByTemplate(@RequestBody CardInputDto cardInputDto, @PathVariable String id) {
-		return cardService.createCardByTemplate(cardInputDto, id);
+	public CardOutputDto createCardByTemplate(@RequestBody CardFromTemplateInputDto cardFromTemplateInputDto, @PathVariable String id) {
+		return cardService.createCardByTemplate(cardFromTemplateInputDto, id);
 	}
 
 	@PostMapping("/newTemplate")
