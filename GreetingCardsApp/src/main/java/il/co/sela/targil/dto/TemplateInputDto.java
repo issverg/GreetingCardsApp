@@ -16,5 +16,4 @@ public class TemplateInputDto {
 	String endingWord;
 	String backgroundImageUrl;
 	boolean isPublic;
-	boolean isTemplate;
 }
