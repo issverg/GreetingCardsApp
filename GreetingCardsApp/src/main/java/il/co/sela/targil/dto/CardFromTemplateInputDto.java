@@ -1,5 +1,6 @@
 package il.co.sela.targil.dto;
 
+import il.co.sela.targil.domain.Prefix;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,11 +10,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TemplateInputDto {
-	String title;
-	String enteringWord;
-	String celebration;
-	String endingWord;
-	String backgroundImageUrl;
+public class CardFromTemplateInputDto {
+	Prefix prefix;
+	String firstName;
+	String lastName;
+	String wishes;
+	String signature;
 	boolean isPublic;
 }

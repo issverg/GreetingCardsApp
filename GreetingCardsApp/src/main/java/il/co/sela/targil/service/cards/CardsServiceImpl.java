@@ -14,6 +14,7 @@ import il.co.sela.targil.dao.GreetingCardsRepository;
 import il.co.sela.targil.dao.UsersRepository;
 import il.co.sela.targil.domain.Client;
 import il.co.sela.targil.domain.GreetingCard;
+import il.co.sela.targil.dto.CardFromTemplateInputDto;
 import il.co.sela.targil.dto.CardInputDto;
 import il.co.sela.targil.dto.CardOutputDto;
 import il.co.sela.targil.dto.TemplateInputDto;
@@ -58,24 +59,24 @@ public class CardsServiceImpl implements ICardsService {
 	}
 
 	@Override
-	public CardOutputDto createCardByTemplate(CardInputDto cardInputDto, String id) {
+	public CardOutputDto createCardByTemplate(CardFromTemplateInputDto cardFromTemplateInputDto, String id) {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
 		GreetingCard card = cardsRepo.findById(id).get();
 		GreetingCard newCard = GreetingCard.builder()
 								.id(card.getId())
 								.title(card.getTitle())
 								.enteringWord(card.getEnteringWord())
-								.prefix(cardInputDto.getPrefix())
-								.firstName(cardInputDto.getFirstName())
-								.lastName(cardInputDto.getLastName())
+								.prefix(cardFromTemplateInputDto.getPrefix())
+								.firstName(cardFromTemplateInputDto.getFirstName())
+								.lastName(cardFromTemplateInputDto.getLastName())
 								.celebration(card.getCelebration())
-								.wishes(cardInputDto.getWishes())
+								.wishes(cardFromTemplateInputDto.getWishes())
 								.endingWord(card.getEndingWord())
-								.signature(cardInputDto.getSignature())
+								.signature(cardFromTemplateInputDto.getSignature())
 								.backgroundImageUrl(card.getBackgroundImageUrl())
 								.owner(email)
 								.isTemplate(false)
-								.isPublic(cardInputDto.isPublic())
+								.isPublic(cardFromTemplateInputDto.isPublic())
 								.build();
 		cardsRepo.save(newCard);
 		
