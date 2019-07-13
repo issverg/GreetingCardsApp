@@ -1,6 +1,7 @@
 package il.co.sela.targil.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Api(description = "REST API Controller for authorization methods.")
 @RestController
 public class AuthController {
